@@ -39,11 +39,11 @@ int read(char value)
 char write(char upper, char lower) {
     printf("...Write...\n");
 
-    char u = (upper << 4);
-    char l = lower;
-    char value = u + l;
+    char value = 0;
+    value |= (upper << 4);
+    value |= lower;
 
-    printf("Upper: %#04x\nLower: %#04x\nValue: %#04x\n", u, l, value);
+    printf("Upper: %#04x\nLower: %#04x\nValue: %#04x\n", upper, lower, value);
 
     return value;
 }
